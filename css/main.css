@@ -1,2 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+html {
+  font-family: "Rubik", sans-serif;
+  font-size: 10px;
+}
+
+.container {
+  width: 1110px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: red;
+}
+.card:nth-child(1) {
+  grid-row: span 2;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
 /*# sourceMappingURL=main.css.map */
