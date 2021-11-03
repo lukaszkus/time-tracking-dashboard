@@ -13,9 +13,18 @@ html {
   font-size: 10px;
 }
 
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .container {
-  width: 1110px;
+  width: 115rem;
   margin: 0 auto;
+  padding: 2rem;
 }
 
 .card {
@@ -27,6 +36,6 @@ html {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  grid-gap: 2rem;
 }
