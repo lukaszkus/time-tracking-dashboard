@@ -27,12 +27,12 @@ body {
 .dashboard {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
-  grid-gap: 2rem;
+  grid-gap: 2.4rem;
 }
 
 .card {
   background-color: #1c1f4a;
-  border-radius: 1.5rem;
+  border-radius: 1.4rem 1.4rem 1.6rem 1.6rem;
 }
 .card:nth-child(1) {
   grid-row: span 2;
@@ -61,7 +61,7 @@ body {
   display: flex;
   align-items: center;
   padding: 3.2rem 2.5rem;
-  border-radius: 1.5rem;
+  border-radius: 1.4rem;
 }
 .card .user__img {
   width: 7rem;
@@ -69,16 +69,17 @@ body {
   border-radius: 6.5rem;
 }
 .card .user__info {
-  padding-left: 2rem;
+  padding-left: 1.6rem;
 }
 .card .user__info p {
   font-size: 1.5rem;
   color: #bdc1ff;
 }
 .card .user__info h1 {
-  font-size: 2.1rem;
+  font-size: 2.4rem;
   font-weight: 300;
   color: #fff;
+  margin-top: 0.5rem;
 }
 .card .nav {
   display: flex;
@@ -91,9 +92,34 @@ body {
 
 .stats {
   background-color: #1c1f4a;
-  border-radius: 1.5rem;
-  padding: 3.2rem 2.5rem;
+  border-radius: 1.4rem;
+  padding: 2.5rem 2.5rem;
   margin-top: 4rem;
+}
+.stats__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.stats__title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #fff;
+  padding-bottom: 0.8rem;
+}
+.stats__icon {
+  width: 2.1rem;
+  height: 0.5rem;
+}
+.stats__hours {
+  font-size: 3.2rem;
+  font-weight: 300;
+  color: #fff;
+}
+.stats__date {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #bdc1ff;
 }
 
 .attribution {

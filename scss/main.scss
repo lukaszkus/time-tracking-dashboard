@@ -31,12 +31,12 @@ body {
 .dashboard {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
-  grid-gap: 2rem;
+  grid-gap: 2.4rem;
 }
 
 .card {
   background-color: $color-dark;
-  border-radius: 1.5rem;
+  border-radius: 1.4rem 1.4rem 1.6rem 1.6rem;
   &:nth-child(1) {
     grid-row: span 2;
     padding: 0;
@@ -71,22 +71,23 @@ body {
     display: flex;
     align-items: center;
     padding: 3.2rem 2.5rem;
-    border-radius: 1.5rem;
+    border-radius: 1.4rem;
     &__img {
       width: 7rem;
       border: 0.3rem solid $color-light;
       border-radius: 6.5rem;
     }
     &__info {
-      padding-left: 2rem;
+      padding-left: 1.6rem;
       p {
         font-size: 1.5rem;
         color: $color-pale;
       }
       h1 {
-        font-size: 2.1rem;
+        font-size: 2.4rem;
         font-weight: 300;
         color: $color-light;
+        margin-top: 0.5rem;
       }
     }
   }
@@ -103,9 +104,34 @@ body {
 
 .stats {
   background-color: $color-dark;
-  border-radius: 1.5rem;
-  padding: 3.2rem 2.5rem;
+  border-radius: 1.4rem;
+  padding: 2.5rem 2.5rem;
   margin-top: 4rem;
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: $color-light;
+    padding-bottom: 0.8rem;
+  }
+  &__icon {
+    width: 2.1rem;
+    height: 0.5rem;
+  }
+  &__hours {
+    font-size: 3.2rem;
+    font-weight: 300;
+    color: $color-light;
+  }
+  &__date {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: $color-pale;
+  }
 }
 
 .attribution {
