@@ -15,7 +15,7 @@ html {
 
 body {
   width: 100%;
-  height: 100vh;
+  // height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,7 +84,7 @@ body {
         color: $color-pale;
       }
       h1 {
-        font-size: 2.4rem;
+        font-size: 2.1rem;
         font-weight: 300;
         color: $color-light;
       }
