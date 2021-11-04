@@ -12,6 +12,7 @@ html {
 
 body {
   width: 100%;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,22 +40,32 @@ body {
   padding: 0;
 }
 .card--work {
-  background: no-repeat url(../images/icon-work.svg) #ff8c66;
+  background-color: #ff8c66;
+  background-image: url(../images/icon-work.svg);
 }
 .card--play {
-  background: no-repeat url(../images/icon-play.svg) #56c2e6;
+  background-color: #56c2e6;
+  background-image: url(../images/icon-play.svg);
 }
 .card--study {
-  background: no-repeat url(../images/icon-study.svg) #ff5c7c;
+  background-color: #ff5c7c;
+  background-image: url(../images/icon-study.svg);
 }
 .card--exercise {
-  background: no-repeat url(../images/icon-exercise.svg) #4acf81;
+  background-color: #4acf81;
+  background-image: url(../images/icon-exercise.svg);
 }
 .card--social {
-  background: no-repeat url(../images/icon-social.svg) #7536d3;
+  background-color: #7536d3;
+  background-image: url(../images/icon-social.svg);
 }
 .card--self {
-  background: no-repeat url(../images/icon-self-care.svg) #f1c65b;
+  background-color: #f1c65b;
+  background-image: url(../images/icon-self-care.svg);
+}
+.card--work, .card--play, .card--study, .card--exercise, .card--social, .card--self {
+  background-repeat: no-repeat;
+  background-position: top -0.5rem right 2rem;
 }
 .card .user {
   background-color: #5847eb;

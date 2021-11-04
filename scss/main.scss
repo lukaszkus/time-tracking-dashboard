@@ -15,7 +15,7 @@ html {
 
 body {
   width: 100%;
-  // height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,29 +41,38 @@ body {
     grid-row: span 2;
     padding: 0;
   }
-
   &--work {
-    background: no-repeat url(../images/icon-work.svg) $color-work;
+    background-color: $color-work;
+    background-image: url(../images/icon-work.svg);
   }
-
   &--play {
-    background: no-repeat url(../images/icon-play.svg) $color-play;
+    background-color: $color-play;
+    background-image: url(../images/icon-play.svg);
   }
-
   &--study {
-    background: no-repeat url(../images/icon-study.svg) $color-study;
+    background-color: $color-study;
+    background-image: url(../images/icon-study.svg);
   }
-
   &--exercise {
-    background: no-repeat url(../images/icon-exercise.svg) $color-exercise;
+    background-color: $color-exercise;
+    background-image: url(../images/icon-exercise.svg);
   }
-
   &--social {
-    background: no-repeat url(../images/icon-social.svg) $color-social;
+    background-color: $color-social;
+    background-image: url(../images/icon-social.svg);
   }
-
   &--self {
-    background: no-repeat url(../images/icon-self-care.svg) $color-self;
+    background-color: $color-self;
+    background-image: url(../images/icon-self-care.svg);
+  }
+  &--work,
+  &--play,
+  &--study,
+  &--exercise,
+  &--social,
+  &--self {
+    background-repeat: no-repeat;
+    background-position: top -0.5rem right 2rem;
   }
 
   .user {
