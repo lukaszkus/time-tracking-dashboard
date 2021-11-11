@@ -127,6 +127,13 @@ body {
       flex-direction: column;
     }
     li {
+      a {
+        color: $color-desaturated;
+        text-decoration: none;
+        &:hover {
+          color: $color-light;
+        }
+      }
       @include desktop {
         padding-bottom: 2rem;
         &:last-child {
@@ -142,6 +149,10 @@ body {
   border-radius: 1.4rem;
   padding: 3rem;
   margin-top: 4rem;
+  &:hover {
+    background-color: $color-card-hover;
+    cursor: pointer;
+  }
   @include desktop {
     margin-top: 4.5rem;
   }
@@ -165,6 +176,9 @@ body {
   &__icon {
     width: 2.1rem;
     height: 0.5rem;
+    &:hover path {
+      fill: #fff;
+    }
   }
   &__hours {
     font-size: 3.2rem;

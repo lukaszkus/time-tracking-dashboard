@@ -128,6 +128,13 @@ body {
     flex-direction: column;
   }
 }
+.card .nav li a {
+  color: #6f76c8;
+  text-decoration: none;
+}
+.card .nav li a:hover {
+  color: #fff;
+}
 @media (min-width: 575px) {
   .card .nav li {
     padding-bottom: 2rem;
@@ -142,6 +149,10 @@ body {
   border-radius: 1.4rem;
   padding: 3rem;
   margin-top: 4rem;
+}
+.stats:hover {
+  background-color: #292f70;
+  cursor: pointer;
 }
 @media (min-width: 575px) {
   .stats {
@@ -168,6 +179,9 @@ body {
 .stats__icon {
   width: 2.1rem;
   height: 0.5rem;
+}
+.stats__icon:hover path {
+  fill: #fff;
 }
 .stats__hours {
   font-size: 3.2rem;

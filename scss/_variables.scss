@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 //Primary colors
 
 $color-primary: hsl(246, 80%, 60%); //blue
@@ -15,6 +17,8 @@ $color-very-dark: hsl(226, 43%, 10%);
 $color-dark: hsl(235, 46%, 20%);
 $color-desaturated: hsl(235, 45%, 61%);
 $color-pale: hsl(236, 100%, 87%);
+
+$color-card-hover: lighten($color-dark, 10%);
 
 //Fonts
 $main-font: "Rubik", sans-serif;
