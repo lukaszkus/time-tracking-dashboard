@@ -10,7 +10,8 @@ const svg = `<svg class="stats__icon" width="21" height="5" xmlns="http://www.w3
 
 
 async function getData() {
-    let url = '../data.json';
+    // let url = '../data.json';
+    let url = 'https://raw.githubusercontent.com/lukaszkus/time-tracking-dashboard/main/data.json';
     try {
         let res = await fetch(url);
         return await res.json();
