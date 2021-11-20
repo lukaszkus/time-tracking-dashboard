@@ -143,6 +143,9 @@ body {
     padding-bottom: 0;
   }
 }
+.card .nav li .active {
+  color: #fff;
+}
 
 .stats {
   background-color: #1c1f4a;

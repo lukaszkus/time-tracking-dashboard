@@ -140,6 +140,9 @@ body {
           padding-bottom: 0;
         }
       }
+      .active {
+        color: $color-light;
+      }
     }
   }
 }
