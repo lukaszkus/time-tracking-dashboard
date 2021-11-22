@@ -10,7 +10,6 @@ const svg = `<svg class="stats__icon" width="21" height="5" xmlns="http://www.w3
 
 
 async function getData() {
-    // let url = '../data.json';
     let url = 'https://raw.githubusercontent.com/lukaszkus/time-tracking-dashboard/main/data.json';
     try {
         let res = await fetch(url);
@@ -106,7 +105,8 @@ async function renderMonthly() {
 };
 
 
-daily.addEventListener('click', function () {
+daily.addEventListener('click', function(e) {
+  e.preventDefault();
   daily.classList.add('active');
   weekly.classList.remove('active');
   monthly.classList.remove('active');
@@ -118,7 +118,8 @@ daily.addEventListener('click', function () {
 });
 
 
-weekly.addEventListener('click', function () {
+weekly.addEventListener('click', function (e) {
+  e.preventDefault();
   weekly.classList.add('active');
   daily.classList.remove('active');
   monthly.classList.remove('active');
@@ -129,7 +130,8 @@ weekly.addEventListener('click', function () {
   renderWeekly();
 });
 
-monthly.addEventListener('click', function () {
+monthly.addEventListener('click', function (e) {
+  e.preventDefault();
   monthly.classList.add('active');
   daily.classList.remove('active');
   weekly.classList.remove('active');
