@@ -28,7 +28,8 @@ async function renderData() {
       const { title, timeframes: { weekly: {current, previous} } } = item;
       const newArticle = document.createElement("article");
 
-      const hr = current !== 1 || previous !== 1 ? "hrs" : "hr";
+      let currHR = current === 1 ? "hr" : "hrs";
+      let prevHR = previous === 1 ? "hr" : "hrs";
 
       const component = `
         <div class="stats">
@@ -37,20 +38,18 @@ async function renderData() {
               ${svg}
             </div>
             <div class="stats__row">
-              <p class="stats__hours">${current}${hr}</p>
-              <span class="stats__date">Last Week - ${previous}${hr}</span>
+              <p class="stats__hours">${current}${currHR}</p>
+              <span class="stats__date">Last Week - ${previous}${prevHR}</span>
             </div>
         </div>
       `;
 
       const dashBoard = document.querySelector('.dashboard');
       dashBoard.appendChild(newArticle).innerHTML = component;
-      newArticle.className = `card card--${title.toLowerCase()} card__stats`;
+      newArticle.className = `card card--${title.toLowerCase()}`;
     });
 };
 renderData();
-
-
 
 async function renderDaily() {
   let data = await getData();
@@ -68,12 +67,12 @@ async function renderDaily() {
   });
 
   for (i = 0; i < statsHours.length; i++) {
-    let hr = i === 1 ? "hr" : "hrs";
+    let hr = dailyCurrent[i] === 1 ? "hr" : "hrs";
     statsHours[i].innerHTML = `${dailyCurrent[i]}${hr}`;
   }
 
   for (i = 0; i < statsDate.length; i++) {
-    let hr = i === 1 ? "hr" : "hrs";
+    let hr = dailyPrevious[i] === 1 ? "hr" : "hrs";
     statsDate[i].innerHTML = `Yesterday - ${dailyPrevious[i]}${hr}`;
   }
 }
@@ -94,12 +93,12 @@ async function renderWeekly() {
   });
 
   for (i = 0; i < statsHours.length; i++) {
-    let hr = i === 1 ? "hr" : "hrs";
+    let hr = weeklyCurrent[i] === 1 ? "hr" : "hrs";
     statsHours[i].innerHTML = `${weeklyCurrent[i]}${hr}`;
   }
 
   for (i = 0; i < statsDate.length; i++) {
-    let hr = i === 1 ? "hr" : "hrs";
+    let hr = weeklyPrevious[i] === 1 ? "hr" : "hrs";
     statsDate[i].innerHTML = `Last Week - ${weeklyPrevious[i]}${hr}`;
   }
 }
@@ -120,12 +119,12 @@ async function renderMonthly() {
   });
 
   for (i = 0; i < statsHours.length; i++) {
-    let hr = i === 1 ? "hr" : "hrs";
+    let hr = monthlyCurrent[i] === 1 ? "hr" : "hrs";
     statsHours[i].innerHTML = `${monthlyCurrent[i]}${hr}`;
   }
 
   for (i = 0; i < statsDate.length; i++) {
-    let hr = i === 1 ? "hr" : "hrs";
+    let hr = monthlyPrevious[i] === 1 ? "hr" : "hrs";
     statsDate[i].innerHTML = `Last Month - ${monthlyPrevious[i]}${hr}`;
   }
 }
@@ -138,7 +137,6 @@ daily.addEventListener('click', function (e) {
   
   renderDaily();
 });
-
 
 weekly.addEventListener('click', function (e) {
   e.preventDefault();
